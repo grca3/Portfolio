@@ -18,7 +18,10 @@ header {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  background: #e1fc69 
+  background: #e1fc69;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 } 
 
 header .container > h1 , 
@@ -57,20 +60,40 @@ header .container > p {
 }
 
 .box1 { 
+  margin-top: 110px;
   background: #92d5f9;
   transform: rotate(360deg);
   transition: 1.7s;
+  box-shadow: 6px 4px #5495b8;
 }
-.box2 { background: #c8d4f7;}
-.box3 { background: #c8d4f7;}
-.box4 { background: #92d5f9;}
+.box2, .box3 {
+  background: #c8d4f7;
+  box-shadow: 6px 4px #92a3d5;
+}
+ 
+.box4 { 
+  background: #92d5f9;
+}
 
-.box5 , .box6 { 
+.box5, .box6 { 
   width: 100px;
   height: 100px;
   background: #c8d4f7;
   border-radius: 50%;
   padding: 4px;
+  box-shadow: 6px 4px #92a3d5;
+}
+
+.box5:active, .box6:active {
+  position: relative;
+  top: 6px;
+  left: 4px;
+  box-shadow: none;
+}
+
+.box6 a { 
+  line-height: 100px;
+  display: block;
 }
 
 .aside {
@@ -155,7 +178,6 @@ a {
     color: #041e60;
     font-family: 'HiraMinProN-W6', Arial, sans-serif;
     font-weight: normal;
-    display: flex;
     justify-content: center; 
     align-items: center; 
     font-size: 26px;
@@ -172,12 +194,14 @@ a {
 
   .box {
     width: 40vw;  
-    margin: 40 auto;
+    margin: 0 auto;
     text-align: center;
     line-height: 1.7;
   }
 
-  .box1 { background: #92d5f9;
+  .box1 { 
+    margin-top: 110px;
+    background: #92d5f9;
     transform: rotate(360deg);
     transition: 2s 1.6s;
   }
@@ -185,6 +209,7 @@ a {
   .box2 {
     transform: rotate(360deg);
     transition: 2.3s;
+    margin-top: 110px;
   }
 
   .box4 { 
@@ -193,10 +218,11 @@ a {
   
   .box5 , .box6 { 
     height: 10vw;
-   margin: 40px auto;
-   text-align: center;
-   line-height: 1.7;
-   border-radius: 0;
+    width: 10vw;
+    margin: 40px auto;
+    text-align: center;
+    line-height: 1.7;
+    border-radius: 0;
   }
 
 }
