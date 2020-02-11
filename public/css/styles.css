@@ -131,9 +131,17 @@ a {
 
 /* jquery slick*/
 .myst-container {
+  width: 100vw; 
   background-color: #7c8dae38;
-  
 }
+.myst-container p {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: #bc6214c0;
+  padding-top: 20px;
+}
+
 .single { 
   max-width: 300px; 
   /* height: 200px; */
@@ -290,6 +298,7 @@ padding: 0;
 
   /* jquery */
 .app-show-container {
+  /* width: 100vw; */
   background: #e1fc69;
   text-align: center;
   padding-bottom: 60px;
