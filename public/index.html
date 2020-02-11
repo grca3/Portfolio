@@ -8,8 +8,15 @@
   <title>Yumi's Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
   
+  <link rel="stylesheet" type="text/css" href="jquery/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="jquery/slick.css"/>
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <meta name="discription" content="yumiのポートフォリオサイトです。">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="main.js"></script> -->
+ 
 </head>
 
 <body>
@@ -32,6 +39,9 @@
             </p>
           </section>
          </a></div>
+
+         
+        
 
         <div class="box box2">
           <section>
@@ -60,8 +70,7 @@
           </p>
         </section>
       </div>
-
-
+      
       <div class="box box5"><a href="https://github.com/grca3" target="_blank"><span class="fab fa-github"></span>&nbsp;GitHub<br>アカウント</a></div>
       <div class="box box6"><a href="https://qiita.com/grca3" target="_blank">Qiita投稿</a></div>
   </div>
@@ -70,9 +79,94 @@
       </div>
   </div>
 
+
+  <div class="myst-container">
+    <div class="single">
+     <div><img src="images/image6.jpeg" alt=""></div>
+     <div><img src="images/image5.jpeg" alt=""></div>
+     <div><img src="images/image4.jpeg" alt=""></div>
+     <div><img src="images/image3.jpeg" alt=""></div>
+     <div><img src="images/image2.jpeg" alt=""></div>
+     <div><img src="images/image1.jpeg" alt=""></div>
+     <div><img src="images/image0.jpeg" alt=""></div>
+     
+ </div>
+ </div>
+
+  <div class="app-show-container">
+    <div class="app-show">
+      <p>使用プログラミング言語</p>
+      <ul id="listq">
+
+        <li class="app-list">
+        <h3 class="app">Myストーリー</h3>
+        <span>+</span>
+        <div class="apps">
+          <p>Ruby.Ruby on Rails.Mysql2.herokuサーバー.html5.css3.GitHub<br>制作期間：2週間</p>
+        </div>
+      </li>
+
+      
+
+        <li class="app-list">
+        <h3 class="app">自己肯定感を持とう</h3>
+        <span>+</span>
+        <div class="apps">
+          <p>JavaScript.html5.css3.firebase.GitHub<br>制作期間：３日</p>
+        </div>
+      </li>
+        <li class="app-list">
+        <h3 class="app">ワインクイズ</h3>
+        <span>+</span>
+        <div class="apps">
+          <p>JavaScript.html5.css3.firebase.GitHub<br>制作期間：３日</p>
+        </div>
+      </li>
+        <li class="app-list">
+        <h3 class="app">ポートフォリオサイト</h3>
+        <span>+</span>
+        <div class="apps">
+          <p>jQuery.html5.css3.firebase.GitHub<br>制作期間：更新多々</p>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </div>
+
   <footer>
     <h3><a href="#top">Topへ</a></h3>
     <p><small>&copy;&nbsp;yumi-2019.com</small></p>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="main.js"></script> -->
+  
+  <script type="text/javascript" src="jquery/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      
+    $('.single').slick({
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    speed: 1000, //1秒
+    fade: true,
+    
+  });
+    
+  $('.app-list').click(function() {
+    var $apps = $(this).find('.apps');
+    if ($apps.hasClass('open')) {
+      $apps.removeClass('open');
+      $apps.slideUp();
+      $(this).find('span').text('+');
+    } else {
+      $apps.addClass('open');
+      $apps.slideDown();
+      $(this).find('span').text('-');
+    }
+  });
+});
+</script>
 </body>
 </html>

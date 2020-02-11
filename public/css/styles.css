@@ -21,7 +21,7 @@ header {
   background: #e1fc69;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 } 
 
 header .container > h1 , 
@@ -60,7 +60,7 @@ header .container > p {
 }
 
 .box1 { 
-  margin-top: 110px;
+  margin-top: 88px;
   background: #92d5f9;
   transform: rotate(360deg);
   transition: 1.7s;
@@ -102,7 +102,8 @@ header .container > p {
 
 footer {
   width: 100vw;
-  background: #000;
+  height: 160px;
+  background: #000000ee;
   margin: 0 auto;
   letter-spacing: 1px;
 }
@@ -126,6 +127,67 @@ footer h3 {
 
 a {
   text-decoration: none;
+}
+
+/* jquery slick*/
+.myst-container {
+  background-color: #7c8dae38;
+  
+}
+.single { 
+  max-width: 300px; 
+  /* height: 200px; */
+  margin: 0 auto 50px;
+}
+.single img{ 
+  width: 100%;
+  padding-top: 28px;
+}
+
+/* jquery ＋ー */
+.app-show-container {
+  background: #e1fc69;
+  text-align: center;
+  padding-bottom: 60px;
+  color: #262329;
+}
+
+.app-show p {
+  padding-top: 40px;
+}
+
+
+#listq {
+  width: 100vw;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.app-list {
+  margin:10px;
+  border-bottom:1px solid rgb(184, 189, 242);
+  position:relative;
+  cursor:pointer;
+  text-align: left;
+  width: 60vw;
+}
+
+.app-list span {
+  position:absolute;
+  top:0;
+  left: 240px;
+  color:#e465658b;
+  font-size:20px;
+}
+
+.apps {
+  padding: 5px 0px;
+  margin-bottom: 15px;
+  display: none;
+  color: #113796;
+}
+.apps p {
+padding: 0;
 }
 
 @media (min-width: 1060px) {
@@ -202,12 +264,12 @@ a {
   .box1 { 
     margin-top: 110px;
     background: #92d5f9;
-    transform: rotate(360deg);
-    transition: 2s 1.6s;
+    /* transform: rotate(360deg);
+    transition: 2s 1.6s; */
   }
 
   .box2 {
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
     transition: 2.3s;
     margin-top: 110px;
   }
@@ -225,6 +287,50 @@ a {
     border-radius: 0;
   }
 
+
+  /* jquery */
+.app-show-container {
+  background: #e1fc69;
+  text-align: center;
+  padding-bottom: 60px;
+  color: #262329;
+}
+
+.app-show p {
+  margin-top: 0;
 }
 
 
+#listq {
+  width: 100vw;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.app-list {
+  margin:10px;
+  border-bottom:1px solid rgb(184, 189, 242);
+  position:relative;
+  cursor:pointer;
+  text-align: left;
+  width: 60vw;
+}
+
+.app-list span {
+  position:absolute;
+  top:0;
+  left: 240px;
+  color:#e465658b;
+  font-size:20px;
+}
+
+.apps {
+  padding: 5px 0px;
+  margin-bottom: 15px;
+  display: none;
+  color: #113796;
+}
+
+
+
+}
